@@ -141,7 +141,18 @@ public class minesweeper_v2 {
 				break;}
 			sm2[x][y]=Integer.toString(m[x][y]);
 			ispisiTablu2(sm2);
-
+			char odgovor=' ';
+			System.out.println("Zelite li oznaciti minu(y\\n)?");
+			odgovor=TextIO.getChar();
+			while(odgovor=='y'){
+			System.out.println("Unesite koordinate (broj reda i broj kolone:");
+			x2=in.nextInt();
+			y2=in.nextInt();
+			sm2[x2][y2]="*";
+			ispisiTablu2(sm2);
+			System.out.println("Zelite li opet oznaciti minu(y\\n)?");
+			odgovor=TextIO.getChar();
+			}
 			
 
 			brPoteza--;
